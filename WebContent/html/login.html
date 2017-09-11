@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript"
+	src="/Java1707Web/lib/jquery/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+    function refreshCode() {
+		$("#codeImg").attr("src","/Java1707Web/checkImg?" + Math.random() );
+	}
+
+</script>
+
+<title>登录页</title>
+</head>
+<body>
+    <form action="/Java1707Web/login" method="post" class="form_border">
+              用户名 ：<input type="text" name="name"/><br>
+                  密码     ：   <input type="text" name="password"/><br>
+                  验证码： <input type="text" name="checkCode"/>
+        <img src="/Java1707Web/checkImg" id="codeImg" onclick="refreshCode()"><br>
+       <input type="submit" value="登录"/><br>
+       
+    </form>
+</body>
+</html>
